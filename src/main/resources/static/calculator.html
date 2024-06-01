@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="/css/calculator.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="outer-box">
+            <br><br>
+            <h1 class="head">Grade Calculator</h1>
+            <div class="inner-box">
+                <div class="activities">
+                    <h3>Activities</h3>
+                    <p>Give grades to the numeric activities:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Short Name</th>
+                                <th>Weight</th>
+                                <th>Grade</th>
+                                <th>Percent</th>
+                            </tr>
+                        </thead>
+                        <tbody id="activities-table">
+                            <tr>
+                                <td>Activity 1</td>
+                                <td>A1</td>
+                                <td><input type="text" name="weight" class="weight"></td>
+                                <td>
+                                    <input type="text" name="grade-obtained" class="grade-input"> / 
+                                    <input type="text" name="grade-total" class="grade-input">
+                                </td>
+                                <td class="percent">0%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="add-row" onclick="addRow()">ADD ROW</button>
+                </div>
+                <div class="result">
+                    <h2>Result</h2>
+                    <div class="flex-container">
+                        <p id="result-output"></p>
+                        <div class="button-container">
+                        <button class="weighted" onclick="calculateWeighted()">WEIGHTED</button>
+                        <button class="mean" onclick="calculateMean()">MEAN</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/calculator.js"></script>
+</body>
+</html>
